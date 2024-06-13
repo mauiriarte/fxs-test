@@ -1,0 +1,25 @@
+.navbar {
+  width: 375px;
+  height: 55px;
+  background-color: var(--clr-dark);
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 137px;
+  height: auto;
+}
+
+.navbaricons {
+  display: flex;
+  gap: 21px;
+  align-items: flex-end;
+  color: var(--clr-blue-highlight-light);
+  margin-right: 6px;
+}
+
+.icon {
+  height: 18px;
+}
