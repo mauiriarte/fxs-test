@@ -16,7 +16,7 @@
   display: flex;
   gap: 21px;
   align-items: flex-end;
-  color: var(--clr-blue-highlight-light);
+  color: var(--clr-light-blue);
   margin-right: 6px;
 }
 

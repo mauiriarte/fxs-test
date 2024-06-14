@@ -1,0 +1,66 @@
+.postcard {
+  width: 344px;
+  border: 1px solid var(--clr-border-grey);
+  border-radius: 4px;
+  background-color: var(--clr-background-lightest);
+  overflow-wrap: break-word;
+}
+
+.cardheader {
+  display: flex;
+  padding: 15px;
+  background-color: var(--clr-background-grey-50);
+  text-align: left;
+}
+
+.categorisation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.datebox {
+  display: flex;
+  font-size: var(--s);
+}
+
+.dateicon {
+  color: var(--clr-grey);
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+}
+
+.cardtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid var(--clr-background-grey);
+  border-style: none none solid none;
+}
+
+.cardcontent {
+  text-align: left;
+  padding: 15px;
+  overflow-wrap: break-word;
+}
+
+.authorinfo {
+  font-size: var(--s);
+  font-weight: 700;
+  color: var(--clr-light-grey);
+}
+
+.titlebox {
+  display: flex;
+  text-align: left;
+}
+
+.authorimg {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
