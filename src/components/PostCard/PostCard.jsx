@@ -4,6 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 const PostCard = ({ post }) => {
+  const formatDate = (originalDate) => {
+    const date = new Date(originalDate);
+    const month = date.toLocaleString('en-US', { month: 'short' });
+    const day = date.getDate();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const formattedTime = `${hour}:${minute < 10 ? '0' + minute : minute}`;
+
+    return `${month} ${day}, ${formattedTime}`;
+  };
+
+  const formattedPublicationTime = formatDate(post.publicationTime);
+
   return (
     <div className={styles.postcard}>
       <div className={styles.cardheader}>
@@ -13,13 +26,15 @@ const PostCard = ({ post }) => {
         </div>
         <div className={styles.datebox}>
           <FontAwesomeIcon icon={faClock} className={styles.dateicon} />
-          <p>{post.publicationTime}</p>
+          <p>{formattedPublicationTime}</p>
         </div>
       </div>
       <div className={styles.cardtitle}>
-        <p className={styles.authorinfo}>
-          {post.author.name} | {post.author.companyName}
-        </p>
+        <div className={styles.authorinfo}>
+          <p>{post.author.name}</p>
+          <p>|</p>
+          <p>{post.author.companyName}</p>
+        </div>
         <div className={styles.titlebox}>
           <img src={post.author.imageUrl} className={styles.authorimg} />
           <h1>{post.title}</h1>

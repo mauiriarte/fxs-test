@@ -64,4 +64,5 @@ p {
   font-size: var(--m);
   font-weight: 300;
   line-height: 20px;
+  color: var(--clr-dark-grey);
 }
