@@ -81,3 +81,40 @@
   padding: 15px;
   overflow-wrap: break-word;
 }
+
+.postbuttons {
+  width: 246px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 18px 17px;
+}
+
+.iconwithtext {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.iconwithtext p {
+  font-size: var(--l);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.postbuttons .icon {
+  height: 17px;
+  width: auto;
+  color: var(--clr-grey);
+}
+
+.iconwithtext .icon {
+  height: 17px;
+  width: auto;
+  color: var(--clr-dark-grey);
+}
+
+.feed {
+  display: flex;
+  gap: 5px;
+  color: var(--clr-dark-blue);
+}

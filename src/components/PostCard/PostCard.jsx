@@ -1,7 +1,15 @@
 import React from 'react';
 import styles from './PostCard.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
+import {
+  faClock,
+  faHeart,
+  faBookmark,
+} from '@fortawesome/free-regular-svg-icons';
+import {
+  faEllipsis,
+  faMagnifyingGlass,
+} from '@fortawesome/free-solid-svg-icons';
 
 const PostCard = ({ post }) => {
   const formatDate = (originalDate) => {
@@ -21,7 +29,10 @@ const PostCard = ({ post }) => {
     <div className={styles.postcard}>
       <div className={styles.cardheader}>
         <div className={styles.categorisation}>
-          <h3>{post.feed}</h3>
+          <div className={styles.feed}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <h3>{post.feed}</h3>
+          </div>
           <h2>{post.subFeed}</h2>
         </div>
         <div className={styles.datebox}>
@@ -42,6 +53,17 @@ const PostCard = ({ post }) => {
       </div>
       <div className={styles.cardcontent}>
         <p>{post.content}</p>
+      </div>
+      <div className={styles.postbuttons}>
+        <div className={styles.iconwithtext}>
+          <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+          <p>Like</p>
+        </div>
+        <div className={styles.iconwithtext}>
+          <FontAwesomeIcon icon={faBookmark} className={styles.icon} />
+          <p>Like</p>
+        </div>
+        <FontAwesomeIcon icon={faEllipsis} className={styles.icon} />
       </div>
     </div>
   );
