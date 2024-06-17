@@ -37,3 +37,34 @@
   width: 21px;
   height: 21px;
 }
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+  .tabbar {
+    width: 100%;
+    padding-left: 32px;
+  }
+
+  .show {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .current {
+    font-size: var(--xl);
+    font-weight: 600;
+  }
+}
