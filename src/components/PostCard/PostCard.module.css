@@ -21,6 +21,12 @@
   align-items: flex-start;
 }
 
+.feed {
+  display: flex;
+  gap: 5px;
+  color: var(--clr-dark-blue);
+}
+
 .datebox {
   display: flex;
   align-items: center;
@@ -89,32 +95,65 @@
   padding: 10px 0 18px 17px;
 }
 
-.iconwithtext {
+.likebutton {
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
-.iconwithtext p {
+.savebutton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.likebutton p {
   font-size: var(--l);
   line-height: 20px;
   font-weight: 400;
 }
 
-.postbuttons .icon {
+.savebutton p {
+  font-size: var(--l);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.menubutton {
   height: 17px;
   width: auto;
   color: var(--clr-grey);
+  cursor: pointer;
 }
 
-.iconwithtext .icon {
-  height: 17px;
-  width: auto;
-  color: var(--clr-dark-grey);
+.likeicon {
+  content: '\f004';
+  font-weight: 400;
+  color: var(--clr-grey);
 }
 
-.feed {
-  display: flex;
-  gap: 5px;
-  color: var(--clr-dark-blue);
+.saveicon {
+  content: '\f02e';
+  font-weight: 400;
+  color: var(--clr-grey);
+}
+
+.solid.likeicon {
+  content: '\f004';
+  font-weight: 900;
+  color: var(--clr-red);
+}
+
+.solid.saveicon {
+  content: '\f02e';
+  font-weight: 900;
+  color: var(--clr-green);
+}
+.red {
+  color: var(--clr-red);
+}
+.green {
+  color: var(--clr-green);
 }
