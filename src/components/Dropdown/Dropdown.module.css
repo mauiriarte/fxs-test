@@ -1,0 +1,43 @@
+.dropdownoverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: absolute;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  background-color: white;
+  padding: 30px 20px;
+  width: 80%;
+  max-width: 298px;
+  border: 1px solid var(--clr-border-grey);
+  color: var(--clr-dark-grey);
+}
+
+.dropdownbutton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 17px;
+}
+
+.icon {
+  width: 21px;
+}
+
+.dropdownbutton p {
+  font-size: var(--l);
+  line-height: 20px;
+  font-weight: 400;
+}

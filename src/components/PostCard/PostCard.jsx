@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useContext } from 'react';
 import styles from './PostCard.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -9,9 +10,28 @@ import {
 import {
   faEllipsis,
   faMagnifyingGlass,
+  faHeart as solidHeart,
+  faBookmark as solidBookmark,
 } from '@fortawesome/free-solid-svg-icons';
+import { DropdownContext } from '../../contexts/DropdownContext';
 
 const PostCard = ({ post }) => {
+  const { toggleDropdown } = useContext(DropdownContext);
+  const [liked, setLiked] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  const toggleLike = () => {
+    setLiked(!liked);
+  };
+
+  const toggleSave = () => {
+    setSaved(!saved);
+  };
+
+  const handleDropdownOpen = () => {
+    toggleDropdown();
+  };
+
   const formatDate = (originalDate) => {
     const date = new Date(originalDate);
     const month = date.toLocaleString('en-US', { month: 'short' });
@@ -47,7 +67,11 @@ const PostCard = ({ post }) => {
           <p>{post.author.companyName}</p>
         </div>
         <div className={styles.titlebox}>
-          <img src={post.author.imageUrl} className={styles.authorimg} />
+          <img
+            src={post.author.imageUrl}
+            className={styles.authorimg}
+            alt='Portrait of the author'
+          />
           <h1>{post.title}</h1>
         </div>
       </div>
@@ -55,15 +79,29 @@ const PostCard = ({ post }) => {
         <p>{post.content}</p>
       </div>
       <div className={styles.postbuttons}>
-        <div className={styles.iconwithtext}>
-          <FontAwesomeIcon icon={faHeart} className={styles.icon} />
-          <p>Like</p>
+        <div className={styles.likebutton} onClick={toggleLike}>
+          <FontAwesomeIcon
+            icon={liked ? solidHeart : faHeart}
+            className={`${styles.likeicon} ${liked ? styles.solid : ''}`}
+          />
+          <p className={`${liked ? styles.red : ''}`}>
+            {liked ? 'Liked!' : 'Like'}
+          </p>
         </div>
-        <div className={styles.iconwithtext}>
-          <FontAwesomeIcon icon={faBookmark} className={styles.icon} />
-          <p>Like</p>
+        <div className={styles.savebutton} onClick={toggleSave}>
+          <FontAwesomeIcon
+            icon={saved ? solidBookmark : faBookmark}
+            className={`${styles.saveicon} ${saved ? styles.solid : ''}`}
+          />
+          <p className={`${saved ? styles.green : ''}`}>
+            {saved ? 'Daved!' : 'Save'}
+          </p>
         </div>
-        <FontAwesomeIcon icon={faEllipsis} className={styles.icon} />
+        <FontAwesomeIcon
+          icon={faEllipsis}
+          className={styles.menubutton}
+          onClick={handleDropdownOpen}
+        />
       </div>
     </div>
   );
