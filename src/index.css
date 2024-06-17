@@ -1,13 +1,68 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color */
+  --clr-dark: #242d38;
+  --clr-dark-blue: #304c70;
+  --clr-blue: #7598c4;
+  --clr-light-blue: #e0e8f2;
+  --clr-background-grey: #ececf1;
+  --clr-background-grey-50: rgba(236, 236, 241, 0.5);
+  --clr-highlight-orange: #e4871b;
+  --clr-dark-grey: #49494f;
+  --clr-grey: #8c8d91;
+  --clr-light-grey: #a3a3a8;
+  --clr-background-lightest: #ffffff;
+  --clr-border-grey: #dddedf;
+
+  /* Size */
+  --xl: 17.6px;
+  --l: 16px;
+  --m: 14.72px;
+  --s: 12.8px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--clr-background-grey);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: var(--xl);
+  color: var(--clr-dark-grey);
+  line-height: 20.8px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--l);
+  color: var(--clr-blue);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: var(--m);
+  color: var(--clr-dark-blue);
+}
+
+p {
+  font-size: var(--m);
+  font-weight: 300;
+  line-height: 20px;
+  color: var(--clr-dark-grey);
 }

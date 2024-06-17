@@ -1,0 +1,120 @@
+.postcard {
+  width: 344px;
+  border: 1px solid var(--clr-border-grey);
+  border-radius: 4px;
+  background-color: var(--clr-background-lightest);
+  overflow-wrap: break-word;
+}
+
+.cardheader {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: var(--clr-background-grey-50);
+  text-align: left;
+}
+
+.categorisation {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.datebox {
+  display: flex;
+  align-items: center;
+  font-size: var(--s);
+  gap: 5px;
+}
+
+.datebox p {
+  font-size: var(--s);
+  font-weight: 400;
+  text-align: right;
+}
+
+.dateicon {
+  color: var(--clr-grey);
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+}
+
+.cardtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 13px 15px 17px 15px;
+  border: 1px solid var(--clr-background-grey);
+  border-style: none none solid none;
+}
+
+.authorinfo {
+  height: 21px;
+  display: flex;
+  gap: 6px;
+}
+
+.authorinfo p {
+  font-size: var(--s);
+  font-weight: 700;
+  color: var(--clr-light-grey);
+}
+
+.titlebox {
+  display: flex;
+  text-align: left;
+  gap: 12px;
+}
+
+.authorimg {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.cardcontent {
+  text-align: left;
+  padding: 15px;
+  overflow-wrap: break-word;
+}
+
+.postbuttons {
+  width: 246px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 18px 17px;
+}
+
+.iconwithtext {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.iconwithtext p {
+  font-size: var(--l);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.postbuttons .icon {
+  height: 17px;
+  width: auto;
+  color: var(--clr-grey);
+}
+
+.iconwithtext .icon {
+  height: 17px;
+  width: auto;
+  color: var(--clr-dark-grey);
+}
+
+.feed {
+  display: flex;
+  gap: 5px;
+  color: var(--clr-dark-blue);
+}

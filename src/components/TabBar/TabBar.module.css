@@ -1,0 +1,39 @@
+.tabbar {
+  width: 375px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 15px 10px 15px;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.tab {
+  display: flex;
+  width: 75px;
+  height: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--xl);
+  font-weight: 700;
+  border: none;
+  margin: none;
+  color: var(--clr-grey);
+}
+
+.tab.active {
+  color: var(--clr-highlight-orange);
+}
+
+.filterbutton {
+  border: none;
+  margin: none;
+}
+
+.filtericon {
+  color: var(--clr-grey);
+  width: 21px;
+  height: 21px;
+}
