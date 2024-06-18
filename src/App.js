@@ -45,7 +45,7 @@ function App() {
               <Feed activeTab={activeTab} posts={posts} />
               <Dropdown isOpen={isOpen} toggleDropdown={toggleDropdown} />
             </div>
-            <RightColumn className='widgets' />
+            <RightColumn />
           </div>
         </main>
       </div>
