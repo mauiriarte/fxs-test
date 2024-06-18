@@ -5,8 +5,8 @@ import PostCard from '../PostCard/PostCard';
 const Feed = ({ activeTab, posts }) => {
   const filteredPosts =
     activeTab === 'latest'
-      ? posts.filter((post) => !post.isPopular)
-      : posts.filter((post) => post.isPopular);
+      ? posts.filter((post) => !post.isPopular).slice(0, 2)
+      : posts.filter((post) => post.isPopular).slice(0, 1);
   return (
     <div className={styles.feed}>
       {filteredPosts.map((post, index) => (
