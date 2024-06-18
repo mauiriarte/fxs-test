@@ -11,10 +11,6 @@
   width: 100%;
 }
 
-.widgets {
-  width: 100%;
-}
-
 @media (min-width: 600px) {
   .App {
     display: flex;
@@ -22,13 +18,5 @@
 
   .display {
     flex-direction: row;
-  }
-
-  .maincolumn {
-    width: 64%;
-  }
-
-  .widgets {
-    width: 36%;
   }
 }
