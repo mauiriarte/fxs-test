@@ -43,7 +43,7 @@ function App() {
             <div className='maincolumn'>
               <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
               <Feed activeTab={activeTab} posts={posts} />
-              <Dropdown />
+              <Dropdown isOpen={isOpen} toggleDropdown={toggleDropdown} />
             </div>
             <RightColumn className='widgets' />
           </div>
