@@ -25,11 +25,10 @@
   }
 
   .maincolumn {
-    flex-grow: 2;
-    width: 50%;
+    width: 64%;
   }
 
   .widgets {
-    flex-grow: 1;
+    width: 36%;
   }
 }

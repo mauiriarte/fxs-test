@@ -9,5 +9,13 @@
 @media (min-width: 600px) {
   .feed {
     padding-left: 24px;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .feed::-webkit-scrollbar {
+    display: none;
   }
 }

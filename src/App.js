@@ -17,7 +17,7 @@ function App() {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          'https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c'
+          'https://fxsfrontend.fxstreet.workers.dev'
         );
         const data = await response.json();
         setPosts(data);

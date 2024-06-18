@@ -12,14 +12,16 @@ import {
   faMagnifyingGlass,
   faHeart as solidHeart,
   faBookmark as solidBookmark,
+  faCaretRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { DropdownContext } from '../../contexts/DropdownContext';
+import DropdownDesktop from '../DropdownDesktop/DropdownDesktop';
 
 const PostCard = ({ post }) => {
   const { toggleDropdown } = useContext(DropdownContext);
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
-
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const toggleLike = () => {
     setLiked(!liked);
   };
@@ -28,8 +30,12 @@ const PostCard = ({ post }) => {
     setSaved(!saved);
   };
 
-  const handleDropdownOpen = () => {
-    toggleDropdown();
+  const handleMenuButtonClick = () => {
+    if (window.innerWidth > 600) {
+      setDropdownVisible(!dropdownVisible);
+    } else {
+      toggleDropdown();
+    }
   };
 
   const formatDate = (originalDate) => {
@@ -50,9 +56,16 @@ const PostCard = ({ post }) => {
       <div className={styles.cardheader}>
         <div className={styles.categorisation}>
           <div className={styles.feed}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              className={styles.feedicon}
+            />
             <h3>{post.feed}</h3>
           </div>
+          <FontAwesomeIcon
+            icon={faCaretRight}
+            className={`${styles.desktop} ${styles.subfeed}`}
+          />
           <h2>{post.subFeed}</h2>
         </div>
         <div className={styles.datebox}>
@@ -60,7 +73,7 @@ const PostCard = ({ post }) => {
           <p>{formattedPublicationTime}</p>
         </div>
       </div>
-      <div className={styles.cardtitle}>
+      <div className={styles.cardtitlemobile}>
         <div className={styles.authorinfo}>
           <p>{post.author.name}</p>
           <p>|</p>
@@ -72,6 +85,21 @@ const PostCard = ({ post }) => {
             className={styles.authorimg}
             alt='Portrait of the author'
           />
+          <h1>{post.title}</h1>
+        </div>
+      </div>
+      <div className={styles.cardtitledesktop}>
+        <img
+          src={post.author.imageUrl}
+          className={styles.authorimg}
+          alt='Portrait of the author'
+        />
+        <div className={styles.titlebox}>
+          <div className={styles.authorinfo}>
+            <p>{post.author.name}</p>
+            <p>|</p>
+            <p>{post.author.companyName}</p>
+          </div>
           <h1>{post.title}</h1>
         </div>
       </div>
@@ -94,14 +122,19 @@ const PostCard = ({ post }) => {
             className={`${styles.saveicon} ${saved ? styles.solid : ''}`}
           />
           <p className={`${saved ? styles.green : ''}`}>
-            {saved ? 'Daved!' : 'Save'}
+            {saved ? 'Saved!' : 'Save'}
           </p>
         </div>
-        <FontAwesomeIcon
-          icon={faEllipsis}
-          className={styles.menubutton}
-          onClick={handleDropdownOpen}
-        />
+        <div className={styles.tooltipcontainer}>
+          <FontAwesomeIcon
+            icon={faEllipsis}
+            className={styles.menubutton}
+            onClick={handleMenuButtonClick}
+          />
+          {dropdownVisible && (
+            <DropdownDesktop className={styles.dropdownDesktop} />
+          )}
+        </div>
       </div>
     </div>
   );

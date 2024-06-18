@@ -26,5 +26,6 @@
 
   .menuitems h2 {
     color: var(--clr-background-grey);
+    text-align: left;
   }
 }

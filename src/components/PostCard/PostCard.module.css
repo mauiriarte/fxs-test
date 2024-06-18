@@ -23,8 +23,13 @@
 
 .feed {
   display: flex;
+  align-items: center;
   gap: 5px;
   color: var(--clr-dark-blue);
+}
+
+.feedicon {
+  line-height: 16px;
 }
 
 .datebox {
@@ -47,13 +52,17 @@
   line-height: 15px;
 }
 
-.cardtitle {
+.cardtitlemobile {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 13px 15px 17px 15px;
   border: 1px solid var(--clr-background-grey);
   border-style: none none solid none;
+}
+
+.cardtitledesktop {
+  display: none;
 }
 
 .authorinfo {
@@ -156,4 +165,142 @@
 }
 .green {
   color: var(--clr-green);
+}
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+.subfeed {
+  color: var(--clr-blue);
+}
+
+@media (min-width: 600px) {
+  .postcard {
+    width: 100%;
+  }
+  .cardheader {
+    padding: 15px 28px;
+  }
+
+  .categorisation {
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+  }
+
+  .categorisation h2 {
+    font-size: var(--xl);
+  }
+
+  .feed {
+    gap: 8px;
+  }
+
+  .feed h3 {
+    font-size: var(--xl);
+  }
+
+  .cardtitlemobile {
+    display: none;
+  }
+
+  .cardtitledesktop {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid var(--clr-background-grey);
+    border-style: none none solid none;
+  }
+
+  .authorinfo {
+    display: flex;
+  }
+
+  .authorinfo p {
+    font-size: var(--l);
+  }
+
+  .authorimg {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+  }
+
+  .titlebox {
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 6px;
+  }
+
+  .cardcontent {
+    padding: 15px 30px;
+  }
+
+  .postbuttons {
+    width: 50%;
+    padding: 15px 30px 20px 30px;
+    gap: 45px;
+    justify-content: flex-start;
+  }
+
+  .likebutton p {
+    font-size: var(--xl);
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .savebutton p {
+    font-size: var(--xl);
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .menubutton {
+    font-size: var(--xl);
+  }
+
+  .likeicon {
+    font-size: var(--xl);
+  }
+
+  .saveicon {
+    font-size: var(--xl);
+  }
+
+  .likeicon:hover,
+  .likebutton:hover .likeicon {
+    color: var(--clr-red);
+  }
+
+  .saveicon:hover,
+  .savebutton:hover .saveicon {
+    color: var(--clr-green);
+  }
+
+  .likebutton:hover p {
+    color: var(--clr-red);
+  }
+
+  .savebutton:hover p {
+    color: var(--clr-green);
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .tooltipcontainer {
+    position: relative;
+  }
 }
