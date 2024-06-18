@@ -63,8 +63,16 @@
     align-items: center;
     gap: 20px;
   }
-  .current {
+
+  .show p {
+    font-family: 'Roboto';
+    font-size: var(--m);
+    font-weight: 400;
+  }
+
+  p.current {
     font-size: var(--xl);
     font-weight: 600;
+    font-family: 'Roboto';
   }
 }

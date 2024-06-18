@@ -104,7 +104,7 @@ const PostCard = ({ post }) => {
         </div>
       </div>
       <div className={styles.cardcontent}>
-        <p>{post.content}</p>
+        <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
       </div>
       <div className={styles.postbuttons}>
         <div className={styles.likebutton} onClick={toggleLike}>

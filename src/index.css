@@ -76,6 +76,14 @@ p {
 
 a {
   color: var(--clr-highlight-orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+p img {
+  margin-top: 20px;
+  object-fit: contain;
+  width: 100%;
 }
 
 @media (min-width: 600px) {
