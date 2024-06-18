@@ -23,3 +23,90 @@
 .icon {
   height: 18px;
 }
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .navbar {
+    width: 83vw;
+    height: 65px;
+    background-color: var(--clr-white);
+    padding: 24px;
+    align-items: center;
+  }
+
+  .navbaricons {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .centralbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .secondaryboxes {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .pagetitle {
+    display: flex;
+    color: var(--clr-dark-blue);
+    gap: 8px;
+  }
+
+  .pagetitle h2 {
+    color: var(--clr-dark-blue);
+  }
+
+  .premium {
+    display: flex;
+    color: var(--clr-highlight-orange);
+    gap: 8px;
+  }
+
+  .premium h2 {
+    color: var(--clr-highlight-orange);
+  }
+
+  .iconbox {
+    color: var(--clr-grey);
+    padding: 24px;
+    border-left: 1px solid var(--clr-border-grey);
+  }
+
+  .userbox {
+    display: flex;
+    align-items: center;
+    color: var(--clr-grey);
+    gap: 15px;
+    padding: 24px 45px 24px 24px;
+    border-left: 1px solid var(--clr-border-grey);
+  }
+
+  .username {
+    color: var(--clr-grey);
+    font-weight: 500;
+  }
+}

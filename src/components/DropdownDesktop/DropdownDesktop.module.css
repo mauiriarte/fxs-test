@@ -1,0 +1,33 @@
+.dropdown {
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 18px 23px 21px 16px;
+  width: 190px;
+  height: 98px;
+  border: 1px solid var(--clr-border-grey);
+  color: var(--clr-dark-grey);
+  box-shadow: 0 4px 14px rgb(0, 0, 0, 0.08);
+}
+
+.dropdownbutton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 17px;
+}
+
+.icon {
+  width: 21px;
+}
+
+.dropdownbutton p {
+  font-size: var(--l);
+  line-height: 20px;
+  font-weight: 400;
+}
